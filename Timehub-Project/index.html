@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TimeHub</title>
+
+  <!-- Tailwind + DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="min-h-screen bg-base-200">
+
+    <!--nav BTN-->
+
+    <section id="navigation" class="flex border p-5 text-center">
+
+      <button class="nav-btn" data-page="clockSection">
+        Clock
+      </button>
+
+      <button class="nav-btn" data-page="stopwatchSection">
+
+        Stopwatch
+      </button>
+
+      <button class="nav-btn" data-page="timerSection">
+
+        Timer
+      </button>
+
+      <button class="nav-btn" data-page="alarmSection">
+
+        Alarm
+      </button>
+
+      <button class="nav-btn" data-page="worldclockSection">
+
+        World Clock
+      </button>
+
+
+    </section>
+
+    <!---world clock body-->
+
+    <section id="clockSection" class="page flex flex-col justify-center items-center gap-4 min-h-screen">
+
+      <div class="text-center">
+
+        <h1 id="clock" class="text-7xl md:text-8xl font-bold tracking-wider">
+          00:00:00
+        </h1>
+
+        <p id="ampm" class=" mt-6 text-2xl font-medium text-base-content/60 mt-2">
+          AM
+        </p>
+
+        <p id="date" class="text-lg text-base-content/70 mt-4">
+          Loading date...
+        </p>
+
+      </div>
+
+      <p id="local">
+        Location...
+      </p>
+    </section>
+
+    <!--Stop Watch Section-->
+
+    <section id="stopwatchSection" class="page hidden">
+
+      <h2 class="text-5xl font-bold">
+        Stopwatch
+      </h2>
+
+      <h1 id="stopwatchDisplay" class="text-7xl font-bold mt-8">
+        00:00:00.000
+      </h1>
+
+      <div class="flex gap-4 mt-10">
+
+        <button id="startBtn" class="btn btn-primary">
+          Start
+        </button>
+
+        <button id="pauseBtn" class="btn btn-warning">
+          Pause
+        </button>
+
+        <button id="resetBtn" class="btn btn-error">
+          Reset
+        </button>
+
+      </div>
+
+    </section>
+
+    <!--Timer Section-->
+
+    <section id="timerSection" class="page hidden">Timer Section</section>
+
+    <section id="alarmSection" class="page hidden">Alarm Section</section>
+
+    <section id="worldclockSection" class="page hidden">World Clock Section</section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  </body>
+
+</html>
