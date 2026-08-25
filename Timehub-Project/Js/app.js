@@ -163,8 +163,49 @@ resetBtn.addEventListener("click", () => {
   timer = null;
   elapsedTime = 0;
   stopwatchDisplay.textContent = "00:00:00.000";
+});
 
-})
+/*Timer */
+
+const timerDisplay = document.getElementById("timerDisplay");
+
+const timerMinutes = document.getElementById("timerMinutes");
+const timerSeconds = document.getElementById("timerSeconds");
+
+const timerStartBtn = document.getElementById("timeStartBtn");
+const timerPauseBtn = document.getElementById("timerPauseBtn");
+const timerResetBtn = document.getElementById("timerResetBtn");
+
+
+let totalSeconds = 0;
+let tmeerInterval = null;
+let timerRunning = false;
+let initialSeconds = 0;
+
+timerStartBtn.addEventListener("click", () => {
+
+  if (timeRunning) return;
+  
+  const minutes = Number(timerMinutes.value);
+  const seconds = Number(timerSeconds.value);
+
+  totalSeconds = (minutes * 60) + seconds;
+
+  initialSeconds = totalSeconds;
+
+  timerRunning = true;
+
+  timerInterval = setInterval(() => {
+
+    totalSeconds--;
+
+    console.log(totalSeconds);
+
+  },1000);
+
+});
+
+
 
 /*
 
